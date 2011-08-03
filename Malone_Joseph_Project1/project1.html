@@ -1,44 +1,40 @@
 <!DOCTYPE html>
+<!--------------------------------------->
+<!--
+ Author: Joseph Malone            
+ Course: Visual Frameworks        
+ Term  : 1108 Instructor: C.Gibson 
+ Date  : August 4, 2011           
 
-<html lang="">
+ Description: Project 1 - one part of a mobile
+ web app which, when completed, will allow users to
+ build a custom to-do or shopping list.
+ ---------------------------------------->
+ <html lang="">
     <head>
         <meta charset="utf-8">
-        <title>My First HTML5 Document</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="robots" content="index, follow" />
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <title>VFW 1108 Project-1</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Joseph_Malone">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
-        <h1>Add Item</h1>
-        <q> This is a test. </q>
-
-        <p>Morbi id magna orci, <a href="http://www.google.com"> ut pulvinar nulla.</a> Pellentesque porta tempor lacus vitae hendrerit. Donec arcu orci, lobortis vel vehicula in, pharetra et nulla. Ut et dolor non libero semper luctus quis id massa. Nam laoreet libero sit amet erat hendrerit vitae placerat mauris interdum. Praesent fringilla elit eget nibh vestibulum fermentum. Mauris eu tempus sapien. Praesent consectetur, ipsum non lacinia luctus, tortor risus molestie ante, nec dictum massa urna a dui. Phasellus nisi est, molestie eu volutpat non, laoreet ac augue. Maecenas eleifend sem et magna suscipit malesuada. Vestibulum urna enim, iaculis ut volutpat posuere, accumsan eget dolor. Donec sit amet nisi libero. Vivamus lorem ligula, accumsan sed eleifend eu, scelerisque eu leo. Proin convallis tincidunt sapien in pharetra. Nunc ut lorem ac eros gravida vulputate. </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <q>Donec felis odio, auctor non mattis et, porttitor a nisi.</q> Nam vulputate auctor pellentesque. Nulla sit amet tortor tellus. Fusce sit amet purus arcu. Nunc euismod consequat pulvinar. Sed ac urna vitae velit imperdiet pellentesque a sit amet mauris. Ut velit dolor, hendrerit sed tempus sed, luctus ut felis. Aenean rutrum tincidunt elit, ut fringilla leo luctus in. Nunc pharetra molestie sapien, eu gravida odio porttitor nec. Etiam mi leo, vestibulum quis porttitor ac, vestibulum sit amet nunc. </p>
-    
-        <blockquote>Curabitur quis sapien odio. Integer consequat, nibh at suscipit ultrices, erat nisi luctus mauris, sit amet tristique mauris dolor tempus felis. Nullam et dapibus velit. Phasellus tincidunt adipiscing massa, nec dignissim libero lacinia vitae. Vivamus ac faucibus tellus. Aenean mi massa, scelerisque sodales sagittis ac, imperdiet eu odio. Suspendisse at tellus eu enim feugiat molestie. Nulla facilisi. Praesent eu leo mauris. Curabitur id libero eu tellus sollicitudin rhoncus. </blockquote>
-    
-        <ul>
-            <li>Red</li>
-            <li>White</li>
-            <li>Blue</li>
-        </ul>
-        
-        <ol>
-            <li>Red alternating stripes.</li>
-            <li>White alternating stripes.</li>
-            <li>Blue block with stars.</li>
-        </ol>
-    
-        <dl>
-            <dt>Red</dt>
-            <dd>First stripe, then alternate.</dd>
-            <dt>White</dt>
-            <dd>Second stripe, then alternate.</dd>
-        </dl>
-    
-    
-
+        <h1>Inventory Item</h1>
+        <h3>Select Distributor</h3> 
+        <select name="distributor">
+            <option>BestMeats
+            <option selected>USFoods
+            <option>Condiments
+        </select>
+       <dl>
+           <dd><li>Item Name:
+           <dt><input type=text name="item" value="" maxlength=20>
+       </dl>
+       <dl>
+           <dd><label for="quantity">Quantity</label>
+           <dt><input type="range" min="1" max="10" name="quantity">
+       </dl>
     </body>
 </html>
