@@ -21,20 +21,37 @@
     </head>
 
     <body>
-        <h1>Inventory Item</h1>
-        <h3>Select Distributor</h3> 
-        <select name="distributor">
-            <option>BestMeats
-            <option selected>USFoods
-            <option>Condiments
-        </select>
-       <dl>
-           <dd><li>Item Name:
-           <dt><input type=text name="item" value="" maxlength=20>
-       </dl>
-       <dl>
-           <dd><label for="quantity">Quantity</label>
-           <dt><input type="range" min="1" max="10" name="quantity">
-       </dl>
+        <!-- Add Item form -->
+        <form id="additem" method="post">
+            <hgroup>
+                <h1>Inventory Item</h1>
+                <h2>Select Distributor</h2>
+            </hgroup>
+        
+            <select name="distributor">
+                <option>BestMeats
+                <option selected>USFoods
+                <option>Condiments
+            </select>
+            <h2>Item Info:</h2>
+            <ul><dl>
+                <dt><li><label for="item">Item Name:</label>
+                <dt><input type=text id="item" name="item" value="Enter Item Name" maxlength=20>
+            
+                <dt><label for="quantity">Quantity:</label>
+                <dt><input type="range" min="1" max="10" id="quantity" name="quantity">
+            
+                <dt><label for="ordered">Mark as ordered?</label>
+                <dt><input type=checkbox id="ordered" name="ordered" value="yes" unchecked>
+            
+                <dt><label for="orderdate">Order Date:</label>
+                <dt><input type="date" min="2011-08-03" max="" id="orderdate" value="order date">
+            
+                <dt><label for="note">Order Note:</label>
+                <dt><textarea name="note" id="note" wrap="soft">add notes about order</textarea>
+            </dl></ul>
+            <input type="submit" id="item-submit" value="submit">
+            <br><input type="reset" id="reset-form" value="clear local storage">
+        </form>
     </body>
 </html>
