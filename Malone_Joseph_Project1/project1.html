@@ -23,6 +23,8 @@
     <body>
         <!-- Add Item form -->
         <form id="additem" method="post">
+        <fieldset>
+            <legend>add inventory</legend>   
             <hgroup>
                 <h1>Inventory Item</h1>
                 <h2>Select Distributor</h2>
@@ -33,7 +35,12 @@
                 <option selected>USFoods
                 <option>Condiments
             </select>
-            <h2>Item Info:</h2>
+            
+            <header>
+                <h2>Item Info:</h2>
+            </header>
+            
+            <!-- list of form elements -->
             <ul><dl>
                 <dt><li><label for="item">Item Name:</label>
                 <dt><input type=text id="item" name="item" value="Enter Item Name" maxlength=20>
@@ -50,8 +57,12 @@
                 <dt><label for="note">Order Note:</label>
                 <dt><textarea name="note" id="note" wrap="soft">add notes about order</textarea>
             </dl></ul>
+            
+            <!-- submit button -->
             <input type="submit" id="item-submit" value="submit">
-            <br><input type="reset" id="reset-form" value="clear local storage">
+            <!-- clear storage -->
+            <br/><a href="#nowhere" title="reset form">clear local storage</a>
+        </fieldset>    
         </form>
     </body>
 </html>
