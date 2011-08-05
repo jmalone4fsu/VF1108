@@ -40,27 +40,31 @@
             </header>
             
             <!-- list of form elements -->
-            <ul><dl>
-                <dt><li><label for="item">Item Name:</label>
-                <dt><input type=text id="item" name="item" value="Enter Item Name" maxlength=20>
+            <ul>
+                <li>
+                   <dl>
+                     <dt><label for="item">Item Name:</label>
+                     <dt><input type=text id="item" name="item" value="Enter Item Name" maxlength=20>
             
-                <dt><label for="quantity">Quantity:</label>
-                <dt><input type="range" min="1" max="10" id="quantity" name="quantity">
+                     <dt><label for="quantity">Quantity:</label>
+                     <dt><input type="range" min="1" max="10" id="quantity" name="quantity">
             
-                <dt><label for="ordered">Mark as ordered?</label>
-                <dt><input type=checkbox id="ordered" name="ordered" value="yes" unchecked>
+                     <dt><label for="ordered">Mark as ordered?</label>
+                     <dt><input type=checkbox id="ordered" name="ordered" value="yes" unchecked>
             
-                <dt><label for="orderdate">Order Date:</label>
-                <dt><input type="date" min="2011-08-03" max="" id="orderdate" value="order date">
+                     <dt><label for="orderdate">Order Date:</label>
+                     <dt><input type="date" min="2011-08-03" max="" id="orderdate" value="order date">
             
-                <dt><label for="note">Order Note:</label>
-                <dt><textarea name="note" id="note" wrap="soft">add notes about order</textarea>
-            </dl></ul>
+                     <dt><label for="note">Order Note:</label>
+                     <dt><textarea name="note" id="note" wrap="soft">add notes about order</textarea>
+                  </dl>
+              </li>
+         </ul>
             
-            <!-- submit button -->
-            <input type="submit" id="item-submit" value="submit">
-            <!-- clear storage -->
-            <br/><a href="#nowhere" title="reset form">clear local storage</a>
+         <!-- submit button -->
+         <input type="submit" id="item-submit" value="submit">
+         <!-- clear storage -->
+         <br/><a href="#nowhere" title="reset form">clear local storage</a>
         </fieldset>
         
         </form>
