@@ -1,0 +1,55 @@
+body {
+    width:460px;background:darkgrey;padding:10px;display:block;
+}
+fieldset {
+    background:teal;margin:10px 10px;
+    padding:0px 20px;
+    border:3px double black;border-radius:20px;box-shadow: 5px 5px 5px #888888;
+}
+h1{
+    margin:10px;border: 3px double black;padding:20px;background:teal;
+    color:peachpuff;border-radius:20px;box-shadow: 5px 5px 5px #888888;
+}
+h2{
+    color:peachpuff;
+}
+legend{
+    font-style:italic; text-decoration:none;color:lightblue;
+}
+label{
+    font-family:fantasy, serif, san-serif; font-size:16px;line-height:1.6em;
+    font-weight:500;text-transform:capitalize;color:aqua;
+}
+textarea{
+    background:lightcyan;font-style:italic;
+    border:3px double cyan;border-radius:4px;
+    resize:vertical;overflow:auto;
+}
+textarea:focus{
+    background-color:cyan;border:4px double white;
+}
+select{
+    border:3px double cyan;border-radius:6px;background:lightcyan;
+}
+a{
+    
+}
+ul{
+    line-height:0.3em;
+}
+ul.a {
+    list-style-type:circle;
+    color:mediumspringgreen;
+}
+ul.b {
+    list-style-type:square;
+    color:hotpink;
+}
+input{
+    border:3px double cyan;border-radius:3px;background:lightcyan;
+    
+}
+input:focus{
+    background-color:cyan;border:4px double white;
+
+}

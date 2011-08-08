@@ -18,56 +18,64 @@
         <meta name="keywords" content="">
         <meta name="author" content="Joseph_Malone">
         <link rel="stylesheet" href="css/styles.css">
+ 
     </head>
 
     <body>
         <!-- Add Item form -->
-        <form id="additem" method="post">
-        <fieldset>
-            <legend>add inventory</legend>   
-            <hgroup>
-                <h1>Inventory Item</h1>
-                <h2>Select Distributor</h2>
-            </hgroup>
+        <div id="main">
+        <form action="#" id="addInvForm">
+               
+            <h1>Inventory Item</h1>
+            <fieldset>
+            <legend>Add Inventory Item</legend>
+            <dl>
+                <dt><h2>Select Distributor</h2></dt>
+                <dd><select id="dist">
+                </select></dd>
+            
+                <dt><h2>Item Info:</h2></dt>
+                <!-- list of form elements -->
+                <dd><label for="item">item name:</label>
+                <dd><input type=text id="item" placeholder="Enter Item Name" maxlength=20>
+                
+                <dd><br><label for="quantity">quantity:</label>
+                <dd><small>1_2_3_4_5_6_7_8_9_10</small>
+                <dd><input type="range" min="1" max="10" id="quantity" name="quantity">
+                
+                <dd><select id="amount">
+                </select></dd>
+            
+                <dd><br><label for="ordered">mark as ordered?</label>
+                <dd><input type="checkbox" id="ordered" name="ordered" value="yes">
+                
+            
+                <dd><label for="orderdate">order date:</label>
+                <dd><input type="text" id="orderdate" placeholder="2011-08-06">
+            
+                <dd><label for="note">order note:</label>
+                <dd><textarea name="note" id="note" wrap="soft" placeholder="add notes about order"></textarea>
+            </dl>
+            <ul class="a">
+                <li>BestMeats : Order Wed/Delivery Fri</li>
+            </ul>
+            <ul class="b">
+                <li>USFoods : Order Thurs/Delivery Mon</li>
+            </ul>
+            
         
-            <select id="dist">
-                <option>BestMeats</option>
-                <option selected>USFoods</option>
-            </select>
-            
-            <header>
-                <h2>Item Info:</h2>
-            </header>
-            
-            <!-- list of form elements -->
-            <ul>
-                <li>
-                   <dl>
-                     <dt><label for="item">Item Name:</label>
-                     <dt><input type=text id="item" name="item" value="Enter Item Name" maxlength=20>
-            
-                     <dt><label for="quantity">Quantity:</label>
-                     <dt><input type="range" min="1" max="10" id="quantity" name="quantity">
-            
-                     <dt><label for="ordered">Mark as ordered?</label>
-                     <dt><input type=checkbox id="ordered" name="ordered" value="yes" unchecked>
-            
-                     <dt><label for="orderdate">Order Date:</label>
-                     <dt><input type="date" min="2011-08-03" max="" id="orderdate" value="order date">
-            
-                     <dt><label for="note">Order Note:</label>
-                     <dt><textarea name="note" id="note" wrap="soft">add notes about order</textarea>
-                  </dl>
-              </li>
-         </ul>
             
          <!-- submit button -->
-         <input type="submit" id="item-submit" value="submit">
+         <input type="submit" value="submit" onclick="storeItem();">
          <!-- clear storage -->
-         <br/><a href="#nowhere" title="reset form">clear local storage</a>
+         <p id="clear">
+            <a href="#" onclick="clearStorage(); location.reload();">clear local storage</a></p>
+         
         </fieldset>
         
         </form>
-    <script src="main.js"></script>
+        </div>
+        <script src="js/main.js"></script>
+        <script>getItems();</script>
     </body>
 </html>
