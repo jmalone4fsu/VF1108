@@ -1,17 +1,23 @@
 body {
-    width:460px;background:darkgrey;padding:10px;display:block;
+    width:460px;background:darkgrey;padding:10px;display:block;text-shadow:2px 1px 1px rgba(0,0,0,0.5);
 }
 fieldset {
-    background:teal;margin:10px 10px;
+
+    background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
+    margin:10px 10px;
     padding:0px 20px;
     border:3px double black;border-radius:20px;box-shadow: 5px 5px 5px #888888;
 }
 h1{
-    margin:10px;border: 3px double black;padding:20px;background:teal;
-    color:peachpuff;border-radius:20px;box-shadow: 5px 5px 5px #888888;
+    font-family: RedstarBold, sans-serif;font-size:26px;text-transform:uppercase;
+    margin:10px;border: 3px double black;padding:10px 20px 10px 45px;
+    background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
+    color:peachpuff;border-radius:20px;box-shadow: 5px 5px 5px #888888;text-shadow:3px 3px 1px rgba(0,0,0,0.8);
 }
 h2{
-    color:peachpuff;
+    font-family: RedstarBold, sans-serif;text-transform:uppercase;
+    margin:10px;font-size:16px;line-height:2.0em;
+    color:peachpuff;text-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
 legend{
     font-style:italic; text-decoration:none;color:lightblue;
@@ -23,7 +29,7 @@ label{
 textarea{
     background:lightcyan;font-style:italic;
     border:3px double cyan;border-radius:4px;
-    resize:vertical;overflow:auto;
+    resize:vertical;overflow:auto;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
 textarea:focus{
     background-color:cyan;border:4px double white;
@@ -46,10 +52,21 @@ ul.b {
     color:hotpink;
 }
 input{
-    border:3px double cyan;border-radius:3px;background:lightcyan;
+    border:3px double cyan;border-radius:3px;background:lightcyan;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
     
 }
 input:focus{
-    background-color:cyan;border:4px double white;
-
+    background-color:cyan;border:4px double white;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+}
+/* @font-face {
+    font-family:"FATSB___";
+    src: url("../fonts/FATSB___.TTF")format('truetype');
+} */
+@font-face {
+    font-family: "mouthbrebb";
+    src:url("../fonts/mouthbrebb.ttf")format('truetype');
+}
+@font-face {
+    font-family: "RedstarBold";
+    src: url("../fonts/RedstarBold.ttf")format('truetype');
 }
