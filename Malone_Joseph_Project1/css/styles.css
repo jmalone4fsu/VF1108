@@ -2,29 +2,31 @@ body {
     width:460px;background:darkgrey;padding:10px;display:block;text-shadow:2px 1px 1px rgba(0,0,0,0.5);
 }
 fieldset {
-
     background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
     margin:10px 10px;
     padding:0px 20px;
     border:3px double black;border-radius:20px;box-shadow: 5px 5px 5px #888888;
 }
 h1{
-    font-family: RedstarBold, sans-serif;font-size:26px;text-transform:uppercase;
-    margin:10px;border: 3px double black;padding:10px 20px 10px 45px;
+    font-family: UppenArmsNF, sans-serif;font-size:40px;
+    color:peachpuff;text-align:center;text-shadow:3px 3px 1px rgba(0,0,0,0.8);
+    margin:10px;border: 3px double black;padding:10px;
+    border-radius:20px;box-shadow: 5px 5px 5px #888888;
     background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
-    color:peachpuff;border-radius:20px;box-shadow: 5px 5px 5px #888888;text-shadow:3px 3px 1px rgba(0,0,0,0.8);
+    
 }
 h2{
-    font-family: RedstarBold, sans-serif;text-transform:uppercase;
-    margin:10px;font-size:16px;line-height:2.0em;
+    font-family: HamburgerHeaven, sans-serif;
+    margin:10px;font-size:22px;line-height:2.0em;
     color:peachpuff;text-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
 legend{
-    font-style:italic; text-decoration:none;color:lightblue;
+    font-style:italic; text-decoration:none;color:darkcyan;text-align:center;
+    border:3px double black;background-color:#FFE4C4;text-shadow:none;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
 label{
-    font-family:fantasy, serif, san-serif; font-size:16px;line-height:1.6em;
-    font-weight:500;text-transform:capitalize;color:aqua;
+    font-family: DymaxionScript, fantasy, serif; font-size:20px;line-height:1.0em;
+    font-weight:500;text-transform:capitalize;color:aqua;text-shadow:2px 2px 1px rgba(0,0,0,1.2)
 }
 textarea{
     background:lightcyan;font-style:italic;
@@ -37,9 +39,15 @@ textarea:focus{
 select{
     border:3px double cyan;border-radius:6px;background:lightcyan;
 }
-a{
-    
+
+a {
+    color:cyan;
+    -webkit-transition-property: background-color, color,letter-spacing;
+    -webkit-transition-duration: 1s;
 }
+a:hover {background:purple;color:yellow;letter-spacing:0.3em}
+a:active  {color:white;}
+
 ul{
     line-height:0.3em;
 }
@@ -51,22 +59,37 @@ ul.b {
     list-style-type:square;
     color:hotpink;
 }
+
 input{
-    border:3px double cyan;border-radius:3px;background:lightcyan;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+    margin-bottom:10px;border:3px double cyan;border-radius:6px;background:lightcyan;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
     
 }
 input:focus{
     background-color:cyan;border:4px double white;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
-/* @font-face {
-    font-family:"FATSB___";
-    src: url("../fonts/FATSB___.TTF")format('truetype');
-} */
+
+#stf {
+    background-color:lightcyan;
+    -webkit-transition-property:all;
+    -webkit-transition-duration: 2s;   
+}
+#stf:hover{
+    background-color:aqua;color:darkred;font-weight: bold;border:4px groove white;
+}
+
 @font-face {
-    font-family: "mouthbrebb";
-    src:url("../fonts/mouthbrebb.ttf")format('truetype');
+    font-family: "UppenArmsNF";
+    src: url(".../fonts/UppenArmsNF.ttf")format('truetype');
 }
 @font-face {
-    font-family: "RedstarBold";
-    src: url("../fonts/RedstarBold.ttf")format('truetype');
+    font-family: "HamburgerHeaven";
+    src: url(".../fonts/HamburgerHeaven.suit")format('truetype');
+}
+@font-face {
+    font-family: "DymaxionScript";
+    src: url(".../fonts/DymaxionScript.suit")format('truetype');
+}
+span {
+    background-color:white;margin:10px;padding:5px 10px;border: 4px groove cyan;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);text-shadow:none;border-radius:20px;
 }

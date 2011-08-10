@@ -28,7 +28,8 @@
                
             <h1>Inventory Item</h1>
             <fieldset>
-            <legend>Add Inventory Item</legend>
+                <legend>Add Inventory Item</legend>
+            
             <dl>
                 <dt><h2>Select Distributor:</h2></dt>
                 <dd><select id="dist">
@@ -40,8 +41,10 @@
                 <dd><input type=text id="item" placeholder="Enter Item Name" maxlength=20>
                 
                 <dd><br><label for="quantity">quantity:</label>
-                <dd><small>1_2_3_4_5_6_7_8_9_10</small>
-                <dd><input type="range" min="1" max="10" id="quantity" name="quantity">
+                <dd><input id="quantity" type="range"  min="0" max="10"  onchange="showValue(this.value)">
+                <span id="selected_amount">5</span>
+                
+                
                 
                 <dd><select id="amount">
                 </select></dd>
@@ -65,14 +68,15 @@
             
         
             
-         <!-- submit button -->
-         <input type="submit" value="submit" onclick="storeItem();">
-         <!-- clear storage -->
-         <p id="clear">
-            <a href="#" onclick="clearStorage(); location.reload();">clear local storage</a></p>
+        <!-- submit button -->
+        <input id="stf" type="submit" value="submit" onclick="storeItem();">
+        <!-- clear storage -->
+        <p id="clear">
+            <a href="#" onclick="clearStorage(); location.reload();">clear local storage</a>
+        </p>
          
-        </fieldset>
         
+        </fieldset>
         </form>
         </div>
         <script src="js/main.js"></script>

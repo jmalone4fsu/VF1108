@@ -43,21 +43,22 @@ function addNewPackage(){
         }
     }
 }
+
 function storeItem(id){
-   var dist = document.getElementById("dist").value;
-   var item = document.getElementById("item").value;
-   var quantity = document.getElementById("quantity").value;
-   var amount = document.getElementById("amount").value;
-   var ordered = document.getElementById("ordered").value;
-   var orderdate = document.getElementById("orderdate").value;
-   var note = document.getElementById("note").value;
-   db.setItem("adist",dist);
-   db.setItem("aitem",item);
-   db.setItem("aquantity",quantity);
-   db.setItem("aamount",amount);
-   db.setItem("aordered",ordered);
-   db.setItem("aorderdate",orderdate);
-   db.setItem("anote",note);
+    var dist = document.getElementById("dist").value;
+    var item = document.getElementById("item").value;
+    var quantity = document.getElementById("quantity").value;
+    var amount = document.getElementById("amount").value;
+    var ordered = document.getElementById("ordered").value;
+    var orderdate = document.getElementById("orderdate").value;
+    var note = document.getElementById("note").value;  
+    db.setItem("adist",dist);
+    db.setItem("aitem",item);
+    db.setItem("aquantity",quantity);
+    db.setItem("aamount",amount);
+    db.setItem("aordered",ordered);
+    db.setItem("aorderdate",orderdate);
+    db.setItem("anote",note);
 }
 function getItems(){
     var dist=db.getItem("adist");
@@ -80,9 +81,12 @@ function getItems(){
     alert(viewItems);
     
 }
-
-
 function clearStorage(){
     db.clear();
     return false;
 }
+function showValue(number){
+    document.getElementById("selected_amount").innerHTML = number;
+    
+}
+
