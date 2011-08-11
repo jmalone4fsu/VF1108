@@ -1,12 +1,23 @@
+/* styles.css
+ Author: Joseph Malone            
+ Course: Visual Frameworks        
+ Term  : 1108 Instructor: C.Gibson 
+ Date  : August 11, 2011           
+
+ Description: Project 2 - one part of a mobile
+ web app which, when completed, will allow users to
+ build a custom to-do or shopping list.
+*/
 body {
     width:460px;background:darkgrey;padding:10px;display:block;text-shadow:2px 1px 1px rgba(0,0,0,0.5);
 }
+/* applied linear gradient to the main background of form */
 fieldset {
     background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
-    margin:10px 10px;
-    padding:0px 20px;
+    margin:10px 10px; padding:10px 20px;
     border:3px double black;border-radius:20px;box-shadow: 5px 5px 5px #888888;
 }
+/* styled background of h1 tag with linear gradient to match form background */ 
 h1{
     font-family: UppenArmsNF, sans-serif;font-size:40px;
     color:peachpuff;text-align:center;text-shadow:3px 3px 1px rgba(0,0,0,0.8);
@@ -15,19 +26,27 @@ h1{
     background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
     
 }
+/* used text-shadow throughout to make text pop */
 h2{
-    font-family: HamburgerHeaven, sans-serif;
-    margin:10px;font-size:22px;line-height:2.0em;
+    font-family: HamburgerHeaven, sans-serif; /* embedded @font */ 
+    margin:0px 10px;font-size:22px;line-height:2.0em;
     color:peachpuff;text-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
+/* box-shadow throughout ands a nice drop shadow affect to elements.
+   used text-shadow:none to remove shadow on legend text */
 legend{
-    font-style:italic; text-decoration:none;color:darkcyan;text-align:center;
-    border:3px double black;background-color:#FFE4C4;text-shadow:none;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+    font-family: DymaxionScript, fantasy, serif; /* embedded @font */
+    text-decoration:none;color:darkcyan;text-align:center;
+    border:4px groove teal;background-color:#FFE4C4;text-shadow:none;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+    padding:0px 10px;font-weight:600;
 }
+/* text-transform:capitalize to style the label text */ 
 label{
-    font-family: DymaxionScript, fantasy, serif; font-size:20px;line-height:1.0em;
-    font-weight:500;text-transform:capitalize;color:aqua;text-shadow:2px 2px 1px rgba(0,0,0,1.2)
+    font-family: DymaxionScript, fantasy, serif; /* embedded @font */ 
+    font-size:20px;line-height:1.0em; font-weight:500;
+    text-transform:capitalize;color:aqua;text-shadow:2px 2px 1px rgba(0,0,0,1.2)
 }
+/* changes the background and styles onfocus */ 
 textarea{
     background:lightcyan;font-style:italic;
     border:3px double cyan;border-radius:4px;
@@ -36,47 +55,57 @@ textarea{
 textarea:focus{
     background-color:cyan;border:4px double white;
 }
+/* adds some styles to the select: drop boxes */ 
 select{
     border:3px double cyan;border-radius:6px;background:lightcyan;
 }
-
+/* changes colors of a: anchors according to state */ 
 a {
     color:cyan;
     -webkit-transition-property: background-color, color,letter-spacing;
     -webkit-transition-duration: 1s;
 }
-a:hover {background:purple;color:yellow;letter-spacing:0.3em}
-a:active  {color:white;}
-
-ul{
+a:hover {
+    background:purple;color:yellow;letter-spacing:0.3em
+}
+a:active {
+    color:white;
+} /* ---------------------------------------------------- */ 
+ul {
     line-height:0.3em;
 }
+/* Extra-credit: list-style (I know I didn't go over this one in the video
+but I want you to try it out!)  */
 ul.a {
     list-style-type:circle;
-    color:mediumspringgreen;
+    color:mediumspringgreen;display:block;
 }
 ul.b {
     list-style-type:square;
     color:hotpink;
 }
-
-input{
-    margin-bottom:10px;border:3px double cyan;border-radius:6px;background:lightcyan;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
-    
+/* styling for the input: fields - changes background color and style onfocus */
+input {
+    margin-bottom:10px;border:3px double cyan;border-radius:6px;background:lightcyan;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
-input:focus{
+input:focus {
     background-color:cyan;border:4px double white;box-shadow:3px 3px 1px rgba(0,0,0,0.5);
 }
-
+/* adds transition effects to the submit: button */ 
 #stf {
     background-color:lightcyan;
     -webkit-transition-property:all;
     -webkit-transition-duration: 2s;   
 }
-#stf:hover{
+#stf:hover {
     background-color:aqua;color:darkred;font-weight: bold;border:4px groove white;
 }
-
+/* Embedded fonts are meant to be installed on the server side so the user sees the
+correct font regardless of them having it on thier own machine. These font files
+are included in the project folder and must be installed on your machine to mimic
+being installed server side. These fonts are SIL Open Font License and freely
+available. */
 @font-face {
     font-family: "UppenArmsNF";
     src: url(".../fonts/UppenArmsNF.ttf")format('truetype');
@@ -88,7 +117,8 @@ input:focus{
 @font-face {
     font-family: "DymaxionScript";
     src: url(".../fonts/DymaxionScript.suit")format('truetype');
-}
+}/* ------------------------------------------------------------------- */
+/* styles the display counter for the select: slider */
 span {
     background-color:white;margin:10px;padding:5px 10px;border: 4px groove cyan;
     box-shadow:3px 3px 1px rgba(0,0,0,0.5);text-shadow:none;border-radius:20px;

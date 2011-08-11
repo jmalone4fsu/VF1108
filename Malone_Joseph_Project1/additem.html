@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!--------------------------------------->
-<!--
+<!-- additem.html
  Author: Joseph Malone            
  Course: Visual Frameworks        
  Term  : 1108 Instructor: C.Gibson 
- Date  : August 4, 2011           
+ Date  : August 11, 2011           
 
- Description: Project 1 - one part of a mobile
+ Description: Project 2 - one part of a mobile
  web app which, when completed, will allow users to
  build a custom to-do or shopping list.
  ---------------------------------------->
@@ -18,7 +18,6 @@
         <meta name="keywords" content="">
         <meta name="author" content="Joseph_Malone">
         <link rel="stylesheet" href="css/styles.css">
- 
     </head>
 
     <body>
@@ -42,32 +41,28 @@
                 
                 <dd><br><label for="quantity">quantity:</label>
                 <dd><input id="quantity" type="range"  min="0" max="10"  onchange="showValue(this.value)">
+                <!-- displays the number for the user of what the slider is on -->
                 <span id="selected_amount">5</span>
-                
-                
-                
                 <dd><select id="amount">
                 </select></dd>
             
                 <dd><br><label for="ordered">mark as ordered?</label>
                 <dd><input type="checkbox" id="ordered" name="ordered" value="yes">
-                
-            
+
                 <dd><label for="orderdate">order date:</label>
                 <dd><input type="text" id="orderdate" placeholder="2011-08-06">
             
                 <dd><label for="note">order note:</label>
                 <dd><textarea name="note" id="note" wrap="soft" placeholder="add notes about order"></textarea>
             </dl>
+            <!-- Extra-credit: list-style (see styles.css) -->
             <ul class="a">
                 <li>BestMeats : Order Wed/Delivery Fri</li>
             </ul>
             <ul class="b">
                 <li>USFoods : Order Thurs/Delivery Mon</li>
             </ul>
-            
-        
-            
+  
         <!-- submit button -->
         <input id="stf" type="submit" value="submit" onclick="storeItem();">
         <!-- clear storage -->
@@ -75,7 +70,6 @@
             <a href="#" onclick="clearStorage(); location.reload();">clear local storage</a>
         </p>
          
-        
         </fieldset>
         </form>
         </div>
