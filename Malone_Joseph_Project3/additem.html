@@ -38,7 +38,7 @@
                 <dt><h2>Item Info:</h2></dt>
                 <!-- list of form elements -->
                 <dd><label for="item">item name:</label>
-                <dd><input type="text" id="item" placeholder="Enter Item Name" maxlength=20 pattern="(\d+)">
+                <dd><input type="text" id="item" placeholder="Enter Item Name">
                 
                 <dd><br><label for="quantity">quantity:</label>
                 <dd><input id="quantity" type="range"  min="0" max="10"  onchange="showValue(this.value)">
@@ -66,15 +66,24 @@
   
             <!-- submit button -->
             <input id="stf" type="submit" value="submit" onclick="storeItem();">
-            <input type="button" name="seeData" value="See Data" onclick="getItems();">
+            <p id="see">
+            <input class="a" type="button" name="seeData" value="See Data" onclick="getItems();">
+            </p>
             <!-- clear storage -->
         </div>
-        <p id="clear">
-        <!--    <a href="#" onclick="clearStorage(); location.reload();">clear local storage</a> -->
-        <input type="button" name="clear" value="Clear Local Storage" onclick="clearStorage(); location.reload();">
-        </p>
-         
         </fieldset>
+        
+        <div id="clear">
+        <fieldset id="list">
+            <h1>Order List</h1>
+        </fieldset>
+        <fieldset id="wow">
+            <p class=joseppi>
+                <input class="a" type="button" name="clear" value="Clear Local Storage" onclick="clearStorage(); location.reload();">
+            </p>
+        </fieldset>
+        </div>
+        
         </form>
         
         

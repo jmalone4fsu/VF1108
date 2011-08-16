@@ -22,7 +22,7 @@ fieldset {
     padding:10px 20px;
     border:3px double black;
     border-radius:20px;
-    box-shadow: 5px 5px 5px #888888;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.8);
 }
 /* styled background of h1 tag with linear gradient to match form background */ 
 h1{
@@ -35,7 +35,7 @@ h1{
     border: 3px double black;
     padding:10px;
     border-radius:20px;
-    box-shadow: 5px 5px 5px #888888;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.8);
     background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
     
 }
@@ -49,7 +49,7 @@ h2{
 }
 /* box-shadow throughout ands a nice drop shadow affect to elements.
    used text-shadow:none to remove shadow on legend text */
-legend{
+legend, p.joseppi {
     font-family: DymaxionScript, fantasy, serif; /* embedded @font */
     text-decoration:none;
     color:darkcyan;
@@ -68,8 +68,8 @@ label{
     line-height:1.0em;
     font-weight:500;
     text-transform:capitalize;
-    color:aqua;t
-    ext-shadow:2px 2px 1px rgba(0,0,0,1.2)
+    color:aqua;
+    text-shadow:2px 2px 1px rgba(0,0,0,1.2);
 }
 /* changes the background and styles onfocus */ 
 textarea{
@@ -93,7 +93,13 @@ select{
 }
 #clear {
     display: none; margin: 15px;}
-    #clear p {color:#900;}
+    #clear p {color:cyan;font-family: san-serif;
+    text-shadow:2px 2px 1px rgba(0,0,0,1.2);
+    text-transform:capitalize;
+    background-color:teal;
+    border:1px dotted black;
+    padding:10px;
+}
 
 /* changes colors of a: anchors according to state */ 
 a {
@@ -104,7 +110,7 @@ a {
 a:hover {
     background:purple;
     color:yellow;
-    letter-spacing:0.3em
+    letter-spacing:0.3em;
 }
 a:active {
     color:white;
@@ -167,22 +173,38 @@ available. */
 /* styles the display counter for the select: slider */
 span {
     background-color:white;
+    color:black;
     margin:10px;padding:5px 10px;
     border: 4px groove cyan;
     box-shadow:3px 3px 1px rgba(0,0,0,0.5);
     text-shadow:none;border-radius:20px;
 }
 p {
-    font-family: UppenArmsNF, sans-serif;
-    font-size:40px;
-    color:peachpuff;
-    text-align:center;
-    text-shadow:3px 3px 1px rgba(0,0,0,0.8);
-    margin:10px;
-    border: 3px double black;
-    padding:10px;
-    border-radius:20px;
-    box-shadow: 5px 5px 5px #888888;
-    background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
-    
+    font-family: UppenArmsNF, fantasy;
+    font-size: 20px; color: white;
 }
+#wow { margin:5px; padding:10px;}
+#wow p {
+    background: #FFE4C4;
+    margin:5px;
+    padding:10px;
+    border:3px double black;
+    border-radius:20px;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.8);
+}
+input.a {
+    background-color:lightcyan;
+    -webkit-transition-property:all;
+    -webkit-transition-duration: 2s;   
+}
+input.a:hover {
+    background-color:aqua;
+    color:darkred;
+    font-weight: bold;
+    border:4px groove white;
+}
+
+
+
+
+

@@ -77,7 +77,7 @@ function storeItem(id){
     var amount = document.getElementById("amount").value;
     var ordered = document.getElementById("ordered").value;
     if (ordered == "on") {
-        ordered = "Ordered";
+        ordered = "Is Ordered";
     }else {
         ordered = "Not Ordered";
     }
@@ -102,13 +102,13 @@ function storeItem(id){
 }
 // gets the data from db (localstorage) and puts it in an array for display //
 function getItems(){
-    var dist=db.getItem("adist");
-    var item=db.getItem("aitem");
-    var quantity=db.getItem("aquantity");
-    var amount=db.getItem("aamount");
-    var ordered=db.getItem("aordered");
-    var orderdate=db.getItem("aorderdate");
-    var note=db.getItem("anote");
+    var dist="Distributor : " + db.getItem("adist");
+    var item="Item : " + db.getItem("aitem");
+    var quantity="Quantity : " + db.getItem("aquantity");
+    var amount="Amount : " + db.getItem("aamount");
+    var ordered="Ordered? : " + db.getItem("aordered");
+    var orderdate="Order Date : " + db.getItem("aorderdate");
+    var note="Notes : " + db.getItem("anote");
     
     var viewItems = [
         dist,
@@ -120,10 +120,17 @@ function getItems(){
         note
     ];
     
-    alert(viewItems);
+    
     document.getElementById("main").style.display = "none";
-    var clrFrm = document.getElementById("clear");
-    clrFrm.style.display = "block";
+    document.getElementById("clear").style.display = "block";
+    var getMyList = document.getElementById("list");
+    for (var i=0, j=viewItems.length; i<j; i++){
+        var newP = document.createElement("p");
+        var itemTxt = document.createTextNode(viewItems[i]);
+        newP.appendChild(itemTxt);
+        getMyList.appendChild(newP);
+    }
+    alert(viewItems);
     
 }
 // function to clear db (localstorage) //
