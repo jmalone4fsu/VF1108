@@ -203,7 +203,10 @@ input.a:hover {
     font-weight: bold;
     border:4px groove white;
 }
-
+#distpic1 {
+    display: none;}
+    #distpic2 {display:none;}
+    #distpic3 {display:none;}
 
 
 

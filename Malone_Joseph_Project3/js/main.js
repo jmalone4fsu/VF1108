@@ -123,6 +123,15 @@ function getItems(){
     
     document.getElementById("main").style.display = "none";
     document.getElementById("clear").style.display = "block";
+    var dist2= db.getItem("adist"); 
+    if (dist2=="BestMeats") {
+        document.getElementById("distpic1").style.display ="block";
+    }else if (dist2=="USFoods") {
+        document.getElementById("distpic2").style.display ="block";
+    }else if (dist2=="Condiments") {
+        document.getElementById("distpic3").style.display ="block";
+    }
+    
     var getMyList = document.getElementById("list");
     for (var i=0, j=viewItems.length; i<j; i++){
         var newP = document.createElement("p");
@@ -137,26 +146,11 @@ function getItems(){
 function clearStorage(){
     alert("storage cleared");
     db.clear();
-    
     return false;
 }
 // function to show the number for the select slider
 function showValue(number){
     document.getElementById("selected_amount").innerHTML = number;   
 }
-//function validForm(); {
-//    var getAitem = document.forms[0]["item"].value;
-//    if (getAitem == "") {
-//        document.getElementById("item").style.border = "1px solid red";
-//        var saywuzup = prompt("Enter an item","");
-//        if (saywuzup != null && saywuzup != "") {
-//            document.forms[0]["item"].value = saywuzup;
-//        }
-//        return false;
-//    }else {
-//        document.getElementById("item").style.border = "1px solid cyan";
-//    }
-//    alert("Form Sumbitted");
-//} // validForm
 
 
