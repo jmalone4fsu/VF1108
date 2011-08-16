@@ -139,7 +139,7 @@ function getItems(){
         newP.appendChild(itemTxt);
         getMyList.appendChild(newP);
     }
-    alert(viewItems);
+    //alert(viewItems);
     
 }
 // function to clear db (localstorage) //
