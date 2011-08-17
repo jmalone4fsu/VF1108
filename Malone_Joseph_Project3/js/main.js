@@ -11,6 +11,7 @@
 
 window.onload = addNewItem(), addNewPackage();
 var db = localStorage; // just shortening the name a bit //
+var regExp=/\b201[1-9]{1}-[0-9]{2}-[0-9]{2}\b/;
 // populates the distributor selection //
 function addNewItem(){
     var newItemtxt;
@@ -67,8 +68,11 @@ function storeItem(id){
     }
     var item = document.getElementById("item").value;
     if (item == ""){
-        alert("Please enter an item name.");
         document.getElementById("item").style.border = "3px double red";
+        var encourage = prompt("Please enter an item name.", "");
+        if (encourage != "") {
+            document.getElementById("item").value = encourage;
+        }
         return false;
     }else {
         document.getElementById("item").style.border = "3px double cyan";
@@ -86,10 +90,20 @@ function storeItem(id){
         alert("Please Enter Order Date");
         document.getElementById("orderdate").style.border = "3px double red";
         return false;
-    }else {
-        document.getElementById("orderdate").style.border = "3px double cyan";
     }
-    var note = document.getElementById("note").value;  
+    var OK=regExp.exec(orderdate);
+    if (!OK){
+        alert("not valid date format");
+        document.getElementById("errdate").innerHTML = "yyyy-mm-dd"; 
+        document.getElementById("orderdate").value;
+        return false;
+    }else {
+        document.getElementById("errdate").style.display= "none";
+    }
+    var note = document.getElementById("note").value;
+    if (note == ""){
+        note = "No additional notes"
+    }
     db.setItem("adist",dist);
     db.setItem("aitem",item);
     db.setItem("aquantity",quantity);
