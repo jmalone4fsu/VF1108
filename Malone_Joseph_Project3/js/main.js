@@ -2,16 +2,19 @@
  Author: Joseph Malone            
  Course: Visual Frameworks        
  Term  : 1108 Instructor: C.Gibson 
- Date  : August 11, 2011           
+ Date  : August 18, 2011           
 
- Description: Project 2 - one part of a mobile
+ Description: Project 3 - one part of a mobile
  web app which, when completed, will allow users to
  build a custom to-do or shopping list.
 */
 
 window.onload = addNewItem(), addNewPackage();
 var db = localStorage; // just shortening the name a bit //
+
+// set regular expression used to check orderdate format //
 var regExp=/\b201[1-9]{1}-[0-9]{2}-[0-9]{2}\b/;
+
 // populates the distributor selection //
 function addNewItem(){
     var newItemtxt;
@@ -20,18 +23,10 @@ function addNewItem(){
     var getItem = document.getElementById("dist");
     // sets the attribute to selected on the BestMeats distributor //
     for (var i=0, j=distName.length; i<j; i++){
-        //if (distName[i]=="BestMeats"){
-        //    newItem = document.createElement("option");
-        //    itemAttr = newItem.setAttribute("selected","");
-        //    newItemtxt = document.createTextNode(distName[i]);
-        //    newItem.appendChild(newItemtxt);
-        //    getItem.appendChild(newItem);
-        //}else {
         newItem = document.createElement("option");
         newItemtxt = document.createTextNode(distName[i]);
         newItem.appendChild(newItemtxt);
         getItem.appendChild(newItem);
-        //}
     }
 }
 // populates the package amount selector //
@@ -58,16 +53,23 @@ function addNewPackage(){
 }
 // stores the user input to db (localstorage)// 
 function storeItem(id){
+    // set variables //
     var dist = document.getElementById("dist").value;
-    if (dist == "no"){
+    var item = document.getElementById("item").value;
+    var quantity = document.getElementById("quantity").value;
+    var amount = document.getElementById("amount").value;
+    var ordered = document.getElementById("ordered").value;
+    var orderdate = document.getElementById("orderdate").value;
+    var note = document.getElementById("note").value;
+    // validate fields //
+    if (dist == "no"){ // if no distributor selected //
         alert("Please select Distributor");
         document.getElementById("dist").style.border = "3px double hotpink";
         return false;
     }else {
         document.getElementById("dist").style.border = "3px double cyan";
     }
-    var item = document.getElementById("item").value;
-    if (item == ""){
+    if (item == ""){ // if item left blank //
         document.getElementById("item").style.border = "3px double red";
         var encourage = prompt("Please enter an item name.", "");
         if (encourage != "") {
@@ -77,20 +79,17 @@ function storeItem(id){
     }else {
         document.getElementById("item").style.border = "3px double cyan";
     }
-    var quantity = document.getElementById("quantity").value;
-    var amount = document.getElementById("amount").value;
-    var ordered = document.getElementById("ordered").value;
-    if (ordered == "on") {
+    if (ordered == "on") { // set value if checked or not checked //
         ordered = "Is Ordered";
     }else {
         ordered = "Not Ordered";
     }
-    var orderdate = document.getElementById("orderdate").value;
-    if (orderdate == ""){
+    if (orderdate == ""){ // if orderdate left blank //
         alert("Please Enter Order Date");
         document.getElementById("orderdate").style.border = "3px double red";
         return false;
     }
+    // if orderdate is incorrect format //
     var OK=regExp.exec(orderdate);
     if (!OK){
         alert("not valid date format");
@@ -100,10 +99,10 @@ function storeItem(id){
     }else {
         document.getElementById("errdate").style.display= "none";
     }
-    var note = document.getElementById("note").value;
-    if (note == ""){
+    if (note == ""){ // set value if note left blank //
         note = "No additional notes"
     }
+    // set data to localStorage //
     db.setItem("adist",dist);
     db.setItem("aitem",item);
     db.setItem("aquantity",quantity);
@@ -134,9 +133,10 @@ function getItems(){
         note
     ];
     
-    
+    // hide div:main show div:clear //
     document.getElementById("main").style.display = "none";
     document.getElementById("clear").style.display = "block";
+    // depending on what distributor - show image //
     var dist2= db.getItem("adist"); 
     if (dist2=="BestMeats") {
         document.getElementById("distpic1").style.display ="block";
@@ -145,7 +145,7 @@ function getItems(){
     }else if (dist2=="Condiments") {
         document.getElementById("distpic3").style.display ="block";
     }
-    
+    // list item info //
     var getMyList = document.getElementById("list");
     for (var i=0, j=viewItems.length; i<j; i++){
         var newP = document.createElement("p");
