@@ -51,7 +51,7 @@
                 <dd><input type="checkbox" id="ordered" name="ordered">
 
                 <dd><label for="orderdate">order date:</label>
-                <dd><input type="text" id="orderdate" placeholder="2011-08-06"><span class="err" id="errdate"> </span>
+                <dd><input type="text" id="orderdate" placeholder="2011-09-23"><span class="err" id="errdate"> </span>
             
                 <dd><label for="note">order note:</label>
                 <dd><textarea name="note" value="" id="note" wrap="soft" placeholder="add notes about order"></textarea>
@@ -65,30 +65,29 @@
             </ul>
   
             <!-- submit button -->
-            <input id="stf" type="submit" value="submit" onclick="return storeItem();">
+            <input id="stf" type="submit" value="Add Item" onclick="return storeItem();">
             <input class="a" type="button" name="seeData" value="See Data" onclick="getItems();">
             <!-- clear storage -->
         </div>
         </fieldset>
         
         <div id="clear">
+                <h1>Order List</h1>
+        <div>
         <fieldset id="list">
-            <h1>Order List</h1>
-            <div id="distpic1">
-            <img class="centred" src="img/bestmeats.png" width=300px>
-            </div>
-            <div id="distpic2">
-            <img class="centred" src="img/usfoods.png" width=300px>
-            </div>
-            <div id="distpic3">
-            <img class="centred" src="img/condiments.png" width=300px>
-            </div>
         </fieldset>
+           <!-- <div id="distpic1"> -->
+        <!--    <img id="distpic1" class="centred" src="img/bestmeats.png" width=300px>-->
+            <!-- </div>
+            <div id="distpic2"> -->
+        <!--    <img id="distpic2" class="centred" src="img/usfoods.png" width=300px>-->
+            <!-- </div> -->
+        </div>
         <fieldset id="wow">
         
             <p class=joseppi>
                 <input class="a" type="button" name="clear" value="Clear Local Storage" onclick="clearStorage(); location.reload();">
-                <input class="a" type="button" name="editdel" value="Edit/Del">
+                <input class="a" type="button" name="back" value="Go To Form" onclick="window.location.reload()">
             </p>
         </fieldset>
         </div>

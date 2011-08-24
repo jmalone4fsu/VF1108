@@ -108,10 +108,15 @@ select{
     border:1px dotted black;
     padding:5px;margin:5px;
 }
+#list {
+    background-color:white;
+    border:3px double dashed white;
+}
 
 /* changes colors of a: anchors according to state */ 
 a {
     color:cyan;
+    margin:5px; padding:5px;
     -webkit-transition-property: background-color, color,letter-spacing;
     -webkit-transition-duration: 1s;
 }
