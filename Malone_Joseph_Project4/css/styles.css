@@ -39,6 +39,7 @@ h1{
     background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
     
 }
+
 /* used text-shadow throughout to make text pop */
 h2{
     font-family: HamburgerHeaven, sans-serif; /* embedded @font */ 

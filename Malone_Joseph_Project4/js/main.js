@@ -208,7 +208,6 @@ function editItem(id){
     var ordered = value[4];
     var orderdate = value[5];
     var note = value[6];
-    alert(orderdate);
     document.getElementById("dist").value = dist;
     document.getElementById("item").value = item;
     document.getElementById("quantity").value = quantity;
@@ -280,6 +279,7 @@ function editItem(id){
         note
         ];
         db.setItem(itemId, allItems);
+        alert("Item Updated!");
     }
 }
 function deleteItem(id){
